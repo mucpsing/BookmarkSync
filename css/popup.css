@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+/** 内容面板样式 */
+#content {
+    width: 320px;
+    padding: 0 15px 15px 15px;
+    min-height: 300px;
+    background: url(../pic/background.svg) center center no-repeat #fff;
+    background-size: contain;
+}
+
+.container {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item {
+    align-content: stretch;
+    width: 100%;
+    margin-top: 10px;
+    line-height: 30px;
+}
+
+.item .label {
+    height: 30px;
+}
+
+.item .input {
+    border: solid 1px #ccc;
+    float: right;
+    width: 200px;
+    height: 30px;
+    padding: 0 5px;
+}
+
+.item .input.error {
+    border: solid 1px #c00;
+}
+
+/** 提示框样式 */
+.toast {
+    display: none;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-indent: 110px;
+    color: red;
+}
+
+/** 记住按钮样式 */
+.rememberWrap {
+    padding-left: 80px;
+}
+
+.rememberWrap .text {
+    opacity: 1;
+    transition: all .4s ease-in-out;
+}
+
+.rememberWrap .text.grey {
+    opacity: .5;
+}
+
+.rememberWrap .dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    width: 25px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.rememberWrap .dot::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    width: 25px;
+    height: 2px;
+    border-radius: 1px;
+    box-shadow: 0 0 1px #000;
+}
+
+.rememberWrap .dot::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #000;
+    background: #fff;
+    transform: translate(0, -50%);
+    transition: all .4s ease-in-out;
+}
+
+.rememberWrap .dot.green::after {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    left: 12px;
+    background: #009933;
+    box-shadow: none;
+}
+
+/** 按钮样式 */
+.buttonWrap {
+    padding-left: 80px;
+}
+
+.button {
+    float: left;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.buttonGreen {
+    border: solid 1px #009933;
+    background: #009933;
+    color: #fff;
+}
+
+.buttonGreen:hover {
+    border: solid 1px #006633;
+    background: #006633;
+}
+
+.buttonGray {
+    border: solid 1px #ccc;
+    background: #fefefe;
+    color: #999;
+}
+
+.buttonGray:hover {
+    border: solid 1px #ccc;
+    background: #eee;
+}
+
+/** 进度条样式 */
+#loaderWrap {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.loader, .loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+
+.loader {
+    margin: 100px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.1);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.1);
+    border-left: 1.1em solid green;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load 1.1s infinite linear;
+    animation: load 1.1s infinite linear;
+}
+
+@-webkit-keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/** 成功样式 */
+#successWrap {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    background: #fff;
+}
+
+.successIcon {
+    width: 100%;
+    height: 80%;
+    background: url(../pic/right.svg) center center/100% 100% no-repeat #fff;
+}
+
+.successText {
+    width: 100%;
+    text-align: center;
+}

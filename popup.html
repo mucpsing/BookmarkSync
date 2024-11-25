@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8" />
+    <title>书签同步码云</title>
+    <link rel="stylesheet" href="css/popup.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div class="container">
+        <div class="item">
+          <label for="tbAccessToken" class="label">access_token</label>
+          <input type="text" class="input" id="tbAccessToken" placeholder="用户授权码" value="" />
+        </div>
+        <div class="item">
+          <label for="tbOwner" class="label">owner</label>
+          <input type="text" class="input" id="tbOwner" placeholder="仓库所属空间地址" value="" />
+        </div>
+        <div class="item">
+          <label for="tbRepo" class="label">repo</label>
+          <input type="text" class="input" id="tbRepo" placeholder="仓库路径" value="" />
+        </div>
+        <div class="item">
+          <label for="tbPath" class="label">path</label>
+          <input type="text" class="input" id="tbPath" placeholder="文件的路径" value="" />
+        </div>
+        <div class="item">
+          <label for="tbBranch" class="label">branch</label>
+          <input type="text" class="input" id="tbBranch" placeholder="分支(通常是master)" value="" />
+        </div>
+
+        <!-- toast -->
+        <div class="item">
+          <div class="toast" id="toast"></div>
+        </div>
+
+        <!-- remember -->
+        <div class="item">
+          <div class="rememberWrap">
+            <span class="text grey" id="rememberText">Remember</span>
+            <span class="dot green" id="rememberDot"></span>
+          </div>
+        </div>
+
+        <!-- 按钮 -->
+        <div class="item">
+          <div class="buttonWrap">
+            <button class="button buttonGreen" id="btnUpload">Upload</button>
+            <button class="button buttonGray" id="btnDownload">Download</button>
+            <button class="button buttonGray" id="btnTest">Test 1</button>
+            <button class="button buttonGray" id="btnClean">Clean 2</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- loader -->
+    <div id="loaderWrap">
+      <div class="loader"></div>
+    </div>
+
+    <!-- success -->
+    <div id="successWrap">
+      <div class="successIcon"></div>
+      <div class="successText"></div>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/utils.js" type='module'></script>
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/base64.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/popup_new.js"></script>
+  </body>
+</html>
